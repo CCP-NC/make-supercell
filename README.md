@@ -19,10 +19,16 @@ will produce by default a `test-scell.cif` output file with a 2x2x2 supercell. T
 
 * `-sc A` will produce a cubic supercell of side A;
 * `-sc A B C` will produce an orthorombic supercell repeated A, B, C times along each respective axis;
-* `-sc AA AB AC BA BB BC CA CB CC` will produce a generic supercell defined by the matrix:
+* `-sc AA AB AC BA BB BC CA CB CC` will produce a generic supercell defined by a matrix.
 
-| AA | AB | AC |
-| BA | BB | BC |
-| CA | CB | CC |
+In the latter case, the matrix will be arranged as:
+
+    ----------------
+    | AA | AB | AC |
+    ----------------
+    | BA | BB | BC |
+    ----------------
+    | CA | CB | CC |
+    ----------------
 
 It is also possible to control the name of the output file with the `--output` (or `-o`) option. The file name must be complete with extension. If the format is supported by ASE, this allows to write output files in a different format from the input.
